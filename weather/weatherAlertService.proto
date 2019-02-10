@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package weather;
+
+service WeatherAlertService {
+    rpc GetCurrentCriticalAlert (AlertRequest) returns (AlertResponse) ;
+}
+
+message AlertRequest {}
+
+message AlertResponse {
+    string text = 1;
+}
